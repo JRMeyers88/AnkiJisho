@@ -1,3 +1,4 @@
 'use strict';
 
-let jpApp = angular.module("JPApp", []);
+const jpApp = angular.module('app', []);
+
