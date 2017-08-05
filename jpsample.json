@@ -1,141 +1,107 @@
 {
-    "vocab": [
-        {
+    "vocab": {
+        "word0": {
             "id": 0,
             "jpn": "電話",
             "read": "でんわ",
             "eng": "telephone"
         },
-        {
+        "word1": {
             "id": 1,
             "jpn": "番号",
             "read": "ばんごう",
             "eng": "number"
         },
-        {
+        "word2": {
             "id": 2,
             "jpn": "中国",
             "read": "ちゅうごく",
             "eng": "China"
         },
-        {
+        "word3": {
             "id": 3,
             "jpn": "科学",
             "read": "かがく",
             "eng": "science"
         },
-        {
+        "word4": {
             "id": 4,
             "jpn": "アジア研究",
             "read": "アジアけんきゅう",
             "eng": "Asian studies"
         },
-        {
+        "word5": {
             "id": 5,
             "jpn": "国際関係",
             "read": "こくさいかんけい",
             "eng": "international relations"
         },
-        {
+        "word6": {
             "id": 6,
             "jpn": "人類学",
             "read": "じんるいがく",
             "eng": "anthropology"
         },
-        {
+        "word7": {
             "id": 7,
             "jpn": "文学",
             "read": "ぶんがく",
             "eng": "literature"
         },
-        {
+        "word8": {
             "id": 8,
             "jpn": "会社員",
             "read": "かいしゃいん",
             "eng": "office worker"
         },
-        {
+        "word9": {
             "id": 9,
             "jpn": "",
             "read": "しゅふ",
             "eng": "housewife"
         },
-        {
+        "word10": {
             "id": 10,
             "jpn": "弁護士",
             "read": "べんごし",
             "eng": "lawyer"
         },
-        {
+       "word11":  {
             "id": 11,
             "jpn": "魚",
             "read": "さかな",
             "eng": "fish"
         },
-        {
+       "word12":  {
             "id": 12,
             "jpn": "傘",
             "read": "かさ",
             "eng": "umbrella"
         },
-        {
+        "word13": {
             "id": 13,
             "jpn": "",
             "read": "かばん",
             "eng": "bag"
         },
-        {
+        "word14": {
             "id": 14,
             "jpn": "",
             "read": "くつ",
             "eng": "shoes"
         },
-        {
+        "word15": {
             "id": 15,
             "jpn": "",
             "read": "さいふ",
             "eng": "wallet"
         },
-        {
+        "word16": {
             "id": 16,
             "jpn": "",
             "read": "じてんしゃ",
             "eng": "bicycle"
         }
 
-    ]
+    }
 }
-
-// とけい  watch; clock
-// ぼうし  hat; cap
-// 喫茶店きっさてんcafe
-// 郵便局ゆうびんきょくpost office
-// 歴史   history
-// 韓国かんこくKorea
-// 映画えいが    movie
-// 雑誌ざっしmagazine
-// 朝ご飯breakfast
-// お酒おさけsake; alcohol
-// お茶おちゃgreen tea
-// 晩御飯ばんごはんdinner
-// 昼ご飯ひるごはんlunch
-// 家いえhome; house
-// うち   home; house; my place
-// 朝あさmorning
-// 土曜日どようびSaturday
-// 毎晩まいばんevery night
-// 聞くきくto listen; to hear
-// 飲むのむto drink
-// 話すはなすto speak; to talk
-// 読むよむto read
-// 起きるおきるto get up
-// 寝るねるto sleep; to go to sleep
-// 勉強するべんきょうするto study
-// 早いはやいearly
-// たいてい usually
-// よく   often; much
-// アルバイト    part-time job
-// 買い物かいものshopping
-// いす   chair
-// 犬dog
-// お土産おみやげsouvenir
