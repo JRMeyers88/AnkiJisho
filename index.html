@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JishoApp</title>
+    <title>AnkiJisho暗記辞書</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
 </head>
 <!-- INITIALIZE -->
@@ -11,34 +12,30 @@
 <!-- <div class="parallax-container">
     <div class="parallax"><img src="img/woods.jpg"></div>
 </div> -->
+<body ng-app="JPApp">
 
-<body ng-app="app">
-    <h1>AnkiJisho暗記辞書</h1>
-    <div ng-controller="WordController">
+<div ng-include="'partials/navbar.html'"></div>
 
-    <div class="nav">
-        <input type="text" ng-model="search" class="searchbar" ng-model-options="{ debounce: 800 }" id="input" placeholder="Search for a word!">
-    </div>
-
-        <div ng-show="search.length" ng-repeat="word in wordArr | filter: wordfinder">
-            <div class="wordcard">
-            <h4>日本語:</h4><span class="mainDefinition" ng-repeat="japanese in word.japanese"> ・ {{japanese.word}} {{japanese.reading}}</span>
-            <h4>English:</h4><span class="englishDefinition" ng-repeat="english in word.senses"> ・ {{english.english_definitions[0]}}</span>
-            </div>
-        </div>
-    </div>
 
 
 
 <!-- SCRIPTS -->
-    <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script> -->
     <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
+
     <!-- <script type="text/javascript" src="main.js"></script> -->
 <!-- APP FILES -->
     <script type="text/javascript" src="app/app.js"></script>
 <!-- PROVIDERS -->
+    <script src="app/values/fb-creds.js"></script>
+    <script src="app/factories/userFactory.js"></script>
     <script src="app/factories/wordFactory.js"></script>
 <!-- CONTROLLERS -->
+    <script src="app/controllers/user-Controller.js"></script>
+    <script src="app/controllers/navController.js"></script>
     <script src="app/controllers/wordController.js"></script>
 </body>
 </html>

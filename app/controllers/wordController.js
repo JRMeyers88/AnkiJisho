@@ -8,15 +8,6 @@ jpApp.controller('WordController', function($scope, $q, $http) {
 
     $scope.search = "hello";
 
-    // WordFactory.getWords()
-    // .then( (wordData) => {
-    //     $scope.wordArr = [];
-    //     $scope.wordList = wordData.data.vocab;
-    //     console.log("worddata", $scope.wordList);
-    //     angular.forEach($scope.wordList, function(words) {
-    //         $scope.wordArr.push(words);
-    //     });
-    // });
 
     function getWords() {
         return $q( (resolve, reject) => {

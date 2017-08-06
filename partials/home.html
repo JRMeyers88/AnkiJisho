@@ -1,0 +1,15 @@
+    <h1>AnkiJisho暗記辞書</h1>
+    <!-- <div ng-controller="WordController"> -->
+
+    <div class="nav">
+        <input type="text" ng-model="search" class="searchbar" ng-model-options="{ debounce: 800 }" id="input" placeholder="Search for a word!">
+    </div>
+
+        <div ng-show="search.length" ng-repeat="word in wordArr | filter: wordfinder">
+            <div class="wordcard">
+            <a class="btn-floating btn-large waves-effect waves-light pink"><i class="material-icons">add</i></a>
+            <h4>日本語:</h4><span class="mainDefinition" ng-repeat="japanese in word.japanese"> ・ {{japanese.word}} {{japanese.reading}}</span>
+            <h4>English:</h4><span class="englishDefinition" ng-repeat="english in word.senses"> ・ {{english.english_definitions[0]}}</span>
+            </div>
+        </div>
+    <!-- </div> -->
