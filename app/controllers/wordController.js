@@ -1,6 +1,13 @@
 'use strict';
 
-jpApp.controller('WordController', function($scope, $q, $http) {
+jpApp.controller('WordController', function($scope, $q, $window, WordFactory, UserFactory) {
+
+    let currentUser = null;
+
+    UserFactory.isAuthenticated(currentUser)
+    .then( (user) => {
+    currentUser = UserFactory.getUser();
+    });
 
     $scope.$watch('search', function() {
         getWords();
@@ -10,8 +17,7 @@ jpApp.controller('WordController', function($scope, $q, $http) {
 
 
     function getWords() {
-        return $q( (resolve, reject) => {
-            $http.get("http://jisho.org/api/v1/search/words?keyword=" + $scope.search)
+        WordFactory.getWords($scope.search)
             .then( (words) => {
                 $scope.wordArr = [];
                 $scope.word = words.data.data;
@@ -21,9 +27,15 @@ jpApp.controller('WordController', function($scope, $q, $http) {
                 console.log("words", $scope.wordArr);
             })
             .catch( (err) => {
-                reject(err);
+                console.log("error", err);
             });
-        });
-    }
+        }
+
+    $scope.saveWord = (word) => {
+        word.uid = currentUser;
+        let addedWord = word;
+        WordFactory.saveWords(word);
+        console.log("you saved the word", word);
+    };
 
 });

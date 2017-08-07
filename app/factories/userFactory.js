@@ -52,11 +52,9 @@ jpApp.factory('UserFactory', function($q, $http, FirebaseUrl, FBCreds) {
     let logoutUser = (userObj) => {
         return firebase.auth().signOut()
         .catch( (err) => {
-            console.log("you can't escape sucka", err.message);
+            console.log("you can't escape", err.message);
         });
     };
-
-    console.log("firebase", firebase);
 
     return {isAuthenticated, getUser, createUser, loginUser, logoutUser};
 

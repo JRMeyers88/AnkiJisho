@@ -18,13 +18,20 @@ let isAuth = (UserFactory) => {
 
 jpApp.config( ($routeProvider) => {
     $routeProvider
-    // .when('/', {
-    // templateUrl: 'partials/home.html',
-    // controller: 'WordController'
-    // })
+    .when('/', {
+    templateUrl: 'partials/home.html',
+    controller: 'WordController'
+    })
     .when('/log-in', {
     templateUrl: 'partials/log-in.html',
     controller: 'UserController'
     })
     .otherwise('/');
+});
+
+jpApp.config( ($httpProvider) => {
+  $httpProvider.defaults.headers.common = {};
+  $httpProvider.defaults.headers.post = {};
+  $httpProvider.defaults.headers.put = {};
+  $httpProvider.defaults.headers.patch = {};
 });
