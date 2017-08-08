@@ -26,6 +26,10 @@ jpApp.config( ($routeProvider) => {
     templateUrl: 'partials/log-in.html',
     controller: 'UserController'
     })
+    .when('/saved', {
+        templateUrl: 'partials/saved.html',
+        controller: 'SavedController'
+    })
     .otherwise('/');
 });
 

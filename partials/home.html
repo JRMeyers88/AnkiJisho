@@ -1,13 +1,21 @@
-    <h1>AnkiJisho暗記辞書</h1>
+
+
 
     <div class="nav">
-        <input type="text" ng-model="search" class="searchbar" ng-model-options="{ debounce: 800 }" id="input" placeholder="Search for a word!">
+        <h1 class="center">AnkiJisho暗記辞書</h1>
+        <input type="text" ng-model="search" class="searchbar center" ng-model-options="{ debounce: 800 }" id="input" placeholder="Search for a word!">
     </div>
 
-        <div class="mainbody" ng-show="search.length" ng-repeat="word in wordArr | filter: wordfinder">
-            <div class="wordcard">
-            <a class="btn-floating btn-large waves-effect waves-light teal" ng-click="saveWord(word)"><i class="material-icons">add</i></a><br>
-            <span class="mainDefinition" ng-repeat="japanese in word.japanese"> ・ <span class="pink-text">{{japanese.word}}</span> {{japanese.reading}}</span><br>
+    <div class="mainbody">
+        <div ng-show="search.length" ng-repeat="word in wordArr | filter: wordfinder">
+            <div class="wordcard" ng-mouseover="hover=true" ng-mouseleave="hover=false">
+            <span ng-show="hover"><a ng-show="isLoggedIn" class="btn-floating btn-small waves-effect waves-light teal right" ng-click="saveWord(word)"><i class="material-icons">add</i></a></span><br>
+            <a ng-hide="isLoggedIn" class="btn-floating btn-small disabled waves-effect waves-light teal" ng-click="saveWord(word)"><i class="material-icons">add</i></a><br>
+            <span class="mainDefinition" ng-repeat="japanese in word.japanese"> ・ {{japanese.word}} <span class="pink-text">{{japanese.reading}}</span></span><br>
             <span class="englishDefinition" ng-repeat="english in word.senses"> ・ {{english.english_definitions[0]}}</span>
             </div>
         </div>
+    </div>
+
+
+

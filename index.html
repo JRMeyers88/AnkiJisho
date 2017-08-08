@@ -8,22 +8,19 @@
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
 </head>
 <!-- INITIALIZE -->
-<body ng-app="JPApp">
+<body ng-app="JPApp" class="black">
 <div ng-include="'partials/navbar.html'"></div>
 
 <div class="parallax-container">
-    <div class="parallax"><img src="img/0006.png"></div>
+    <div class="parallax"><img src="../img/0006.png"></div>
 </div>
-
 
 <div ng-view></div>
 
 
 <div class="parallax-container">
-    <div class="parallax"><img src="img/0009.jpg"></div>
+    <div class="parallax"><img src="../img/0009.jpg"></div>
 </div>
-
-
 
 <!-- SCRIPTS -->
     <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
@@ -45,5 +42,6 @@
     <script src="app/controllers/user-Controller.js"></script>
     <script src="app/controllers/navController.js"></script>
     <script src="app/controllers/wordController.js"></script>
+    <script src="app/controllers/savedController.js"></script>
 </body>
 </html>

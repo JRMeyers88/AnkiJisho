@@ -13,7 +13,20 @@ jpApp.controller('WordController', function($scope, $q, $window, WordFactory, Us
         getWords();
     });
 
-    $scope.search = "hello";
+    $scope.isLoggedIn = false;
+
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            $scope.isLoggedIn = true;
+            $scope.$apply();
+        } else {
+            $scope.isLoggedIn = false;
+            $scope.$apply();
+            $window.location.href = "#!/login";
+        }
+    });
+
+    $scope.search = "";
 
 
     function getWords() {

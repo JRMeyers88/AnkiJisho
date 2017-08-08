@@ -1,0 +1,21 @@
+
+<nav ng-controller="NavController">
+    <div class="nav-wrapper black">
+        <ul id="nav-mobile" class="center">
+            <li><a href="#!/practice">Practice Memorization</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="mainbody">
+        <div ng-repeat="word in userWordArr">
+            <div class="wordcard hoverable" ng-mouseover="hover=true" ng-mouseleave="hover=false">
+
+                <a class="btn-floating btn-small waves-effect waves-light red right" ng-show="hover" ng-click="deleteUserWord(word.fbid)"><i class="material-icons">delete</i></a><br>
+
+            <span class="mainDefinition" ng-repeat="japanese in word.japanese"> ・ {{japanese.word}} <span class="pink-text">{{japanese.reading}}</span></span><br>
+            <span class="englishDefinition" ng-repeat="english in word.senses"> ・ {{english.english_definitions[0]}}</span>
+            </div>
+        </div>
+    </div>
+

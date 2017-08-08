@@ -3,8 +3,9 @@
       <a href="#" class="brand-logo">AnkiJisho暗記辞書</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">About</a></li>
-        <li><a href="#!/log-in">Log In</a></li>
-        <li><a href="#" ng-click="logout()">Log Out</a></li>
+        <li><a href="#!/log-in" ng-hide="isLoggedIn">Log In</a></li>
+        <li><a href="#" ng-show="isLoggedIn" ng-click="logout()">Log Out</a></li>
+        <li><a href="#!/saved" ng-show="isLoggedIn">My Words</a></li>
       </ul>
     </div>
   </nav>
