@@ -1,26 +1,52 @@
 * {
     font-family: 'Didact Gothic', sans-serif;
+    // background-color: rgb(0, 0, 0);
     // box-sizing: border-box;
 }
 
+.mainbody {
+    background-image: url('../img/038.jpg');
+    background-size: 1600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 .wordcard {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     color: white;
     padding: 5px;
     margin: 10px 15%;
     box-shadow: 2px 2px 8px black;
 }
 
+.nav-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
 .mainDefinition {
     font-size: 1.75em;
 }
 
-.mainReading {
+.englishDefinition {
     font-size: 1.5em;
 }
 
-.englishDefinition {
-    font-size: 1.5em;
+// .sidenav {
+//     float: left;
+//     width: 33.3%;
+//     padding: 0 10% 0 5%;
+//     background-color: #DEDEDE;
+//     height: 370px;
+//     position: top;
+// }
+
+.nav {
+    background-color: black;
+    color: white;
+}
+
+.parallax-container {
+    height: 250px;
 }
