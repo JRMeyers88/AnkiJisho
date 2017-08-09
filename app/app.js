@@ -30,6 +30,10 @@ jpApp.config( ($routeProvider) => {
         templateUrl: 'partials/saved.html',
         controller: 'SavedController'
     })
+    .when('/practice', {
+        templateUrl: 'partials/flashcard.html',
+        controller: 'FlashcardController'
+    })
     .otherwise('/');
 });
 
