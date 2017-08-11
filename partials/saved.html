@@ -1,8 +1,8 @@
 
 <nav ng-controller="NavController">
-    <div class="nav-wrapper black">
-        <ul id="nav-mobile" class="center">
-            <li><a href="#!/practice" class="waves-effect waves-light btn">Practice Memorization</a></li>
+    <div class="nav-wrapper black center">
+        <ul id="nav-mobile">
+            <a href="#!/practice" class="waves-effect waves-light btn">Practice Memorization</a>
 
         </ul>
     </div>
@@ -16,7 +16,14 @@
 
             <span class="mainDefinition" ng-repeat="japanese in word.japanese"> ・ {{japanese.word}} <span class="pink-text">{{japanese.reading}}</span></span><br>
             <span class="englishDefinition" ng-repeat="english in word.senses"> ・ {{english.english_definitions[0]}}</span>
+            <div ng-controller="FolderController" class="center">
+                <span ng-repeat="folder in userFolders">
+                    <a href="#!/saved" ng-show="hover" ng-click="addToFolder(folderId, word)">&nbsp;{{folder.title}}&nbsp;</a>
+                </span>
             </div>
+            </div>
+
+
         </div>
     </div>
 

@@ -20,7 +20,8 @@ jpApp.controller("FlashcardController", function($scope, $window, UserFactory, W
             angular.forEach(cardList, function(card) {
                 $scope.deckArr.push(card);
                 $scope.deckArr.sort(function() {
-                  return 0.5 - Math.random();
+                  // return 0.5 - Math.random();
+                  return Math.floor(Math.random() * $scope.deckArr.length);
                 });
             });
         });

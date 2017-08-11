@@ -69,7 +69,7 @@ jpApp.factory('WordFactory', function($q, $http, FirebaseUrl, UserFactory) {
             $http.get(`${FirebaseUrl}/folders.json?orderBy="uid"&equalTo="${UserFactory.getUser()}"`)
             .then( (folderData) => {
                 resolve(folderData);
-                console.log("folderData", folderData);
+                // console.log("folderData", folderData);
             })
             .catch( (err) => {
                 reject(err);
@@ -89,6 +89,18 @@ jpApp.factory('WordFactory', function($q, $http, FirebaseUrl, UserFactory) {
         });
     };
 
+    let addWord = (addedWord) => {
+        return $q( (resolve, reject) => {
+            $http.post(`${FirebaseUrl}/addedWords.json`, angular.toJson(addedWord))
+            .then( (wordData) => {
+                resolve(wordData);
+            })
+            .catch( (err) => {
+                reject(err);
+            });
+        });
+    };
 
-    return { getWords, saveWords, getUserWords, deleteWord, addFolder, getUserFolders, getFolder };
+
+    return { getWords, saveWords, getUserWords, deleteWord, addFolder, getUserFolders, getFolder, addWord };
 });
