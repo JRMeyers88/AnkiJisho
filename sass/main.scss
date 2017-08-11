@@ -4,8 +4,46 @@
     // box-sizing: border-box;
 }
 
+// @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+
 .mainbody {
     background-image: url('../img/038.jpg');
+    background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.foldersbody {
+    background-image: url('../img/0003.png');
+    background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.folderbody {
+    background-image: url('../img/0002.png');
+    background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.createbody {
+    background-image: url('../img/025.jpg');
+    background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.loginbody {
+    background-image: url('../img/0006.png');
     background-size: 1600px;
     height: 1000px;
     padding-top: 10px;
@@ -47,7 +85,7 @@
 }
 
 .wordcard:hover {
-    background-color: rgba(81,40,122, 0.75);
+    background-color: rgba(30,15,45, 0.75);
     color: white;
     padding: 5px;
     margin: 10px 15%;
@@ -80,6 +118,10 @@
 .partsofspeech {
     font-size: 1.5em;
     float: right;
+}
+
+.opacity {
+  opacity: .75;
 }
 
 .nav {

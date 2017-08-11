@@ -1,22 +1,25 @@
 
 
 
-    <div class="nav">
-        <h1 class="center">AnkiJisho暗記辞書</h1>
-        <input type="text" ng-model="search" class="searchbar center" ng-model-options="{ debounce: 800 }" id="input" placeholder="Search for a word!">
-    </div>
+<div class="nav">
+    <h1 class="center">AnkiJisho暗記辞書</h1>
+    <input type="text" ng-model="search" class="searchbar center" ng-model-options="{ debounce: 800 }" id="input" placeholder="Search for a word!">
+</div>
 
-    <div class="mainbody">
-        <div ng-show="search.length" ng-repeat="word in wordArr | filter: wordfinder">
-            <div class="wordcard hoverable" ng-mouseover="hover=true" ng-mouseleave="hover=false">
-                <span ng-show="hover"><a ng-show="isLoggedIn" class="btn-floating btn-small waves-effect waves-light teal right" ng-click="saveWord(word)"><i class="material-icons">add</i></a></span><br>
-                <span class="mainDefinition" ng-repeat="japanese in word.japanese"> ・ {{japanese.word}} <span class="pink-text">{{japanese.reading}}</span></span><br>
-                <span class="englishDefinition" ng-repeat="english in word.senses"> ・ {{english.english_definitions[0]}}</span><br>
-                <span class="partsofspeech pink-text" ng-if="word.is_common"> ・ Common</span>
-                <span class="partsofspeech" ng-repeat="parts_of_speech in word.senses"> {{parts_of_speech.parts_of_speech[0]}} </span>
-            </div>
+<div class="mainbody">
+    <div ng-show="search.length" ng-repeat="word in wordArr | filter: wordfinder">
+        <div class="wordcard hoverable" ng-mouseover="hover=true" ng-mouseleave="hover=false">
+
+            <span ng-show="hover"><a ng-show="isLoggedIn" class="btn-floating btn-small waves-effect waves-light blue right" ng-click="saveWord(word)"><i class="material-icons">add</i></a></span><br>
+
+            <span class="mainDefinition" ng-repeat="japanese in word.japanese"> ・ {{japanese.word}} <span class="pink-text">{{japanese.reading}}</span></span><br>
+            <span class="englishDefinition" ng-repeat="english in word.senses"> ・ {{english.english_definitions[0]}}</span><br>
+            <span class="partsofspeech pink-text" ng-if="word.is_common"> &nbsp; Common</span>
+            <span class="partsofspeech" ng-repeat="senses in word"> &nbsp; {{senses[0].parts_of_speech[0]}} </span><br>
+            <span class="englishDefinition" ng-repeat="other in word.senses"> &nbsp; <a>{{other.see_also[0]}}</a></span>
         </div>
     </div>
+</div>
 
 
 

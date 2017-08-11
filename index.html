@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
 </head>
 <!-- INITIALIZE -->
 <body ng-app="JPApp" class="black">
 <div ng-include="'partials/navbar.html'"></div>
 
-<div class="parallax-container">
+<!-- <div class="parallax-container">
     <div class="parallax"><img src="../img/0006.png"></div>
-</div>
+</div> -->
 
 <div ng-view></div>
 
@@ -24,25 +25,29 @@
 
 <!-- SCRIPTS -->
     <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script> -->
-    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
     <script type="text/javascript" src="main.js"></script>
 
 <!-- APP FILES -->
     <script type="text/javascript" src="app/app.js"></script>
+
 <!-- PROVIDERS -->
     <script src="app/values/fb-creds.js"></script>
     <script src="app/factories/userFactory.js"></script>
     <script src="app/factories/wordFactory.js"></script>
+
 <!-- CONTROLLERS -->
     <script src="app/controllers/user-Controller.js"></script>
     <script src="app/controllers/navController.js"></script>
     <script src="app/controllers/wordController.js"></script>
     <script src="app/controllers/savedController.js"></script>
     <script src="app/controllers/flashcardController.js"></script>
+    <script src="app/controllers/folderController.js"></script>
+    <script src="app/controllers/createFolderController.js"></script>
 </body>
 </html>

@@ -8,9 +8,12 @@
                 <span class="mainDefinition">{{japanese.word}} <span class="pink-text">{{japanese.reading}}</span></span><br>
                 <span class="englishDefinition" ng-show="definition" ng-repeat="english in flashcard.senses">{{english.english_definitions[0]}} </span><br>
             <span ng-show="$last && card !== deckArr.length">
-                <button ng-click="right()" ng-show="definition">Right</button>
+                <!-- <button ng-click="right()" ng-show="definition">Right</button>
                 <button ng-click="definition=true" ng-show="!definition">Show Answer</button>
-                <button ng-click="wrong(flashcard)" ng-show="definition">Wrong</button>
+                <button ng-click="wrong(flashcard)" ng-show="definition">Wrong</button> -->
+              <a class="waves-effect waves-light btn" ng-click="right()" ng-show="definition">Right</a>
+              <a class="waves-effect waves-light btn" ng-click="definition=true" ng-show="!definition">Show Answer</a>
+              <a class="waves-effect waves-light btn" ng-click="wrong(flashcard)" ng-show="definition">Wrong</a>
             </span>
             </span></span>
         </div>

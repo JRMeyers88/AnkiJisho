@@ -1,0 +1,15 @@
+
+<div class="foldersbody">
+
+<div class="col s12 m4 l3" ng-repeat="folder in userFolders">
+    <div id="{{folder.id}}" class="card black darken-4 opacity">
+      <div class="card-content white-text">
+        <span class="card-title">{{folder.title}}</span>
+      </div>
+      <div class="card-action">
+        <a ng-href="#!/my-folder/{{folder.id}}">Saved Words</a>
+      </div>
+  </div>
+</div>
+
+</div>

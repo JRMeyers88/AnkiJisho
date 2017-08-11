@@ -22,7 +22,6 @@ jpApp.controller('WordController', function($scope, $q, $window, WordFactory, Us
         } else {
             $scope.isLoggedIn = false;
             $scope.$apply();
-            $window.location.href = "#!/login";
         }
     });
 
