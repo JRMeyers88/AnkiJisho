@@ -1,0 +1,16 @@
+
+<div class="row foldersbody">
+
+<div class="col s12 m4 l3" ng-repeat="folder in userFolders" ng-mouseover="hover=true" ng-mouseleave="hover=false">
+    <div id="{{folder.id}}" class="card black darken-4 opacity">
+      <div class="card-content white-text">
+        <span class="card-title">{{folder.title}}</span>
+        <a class="btn-floating btn-small waves-effect waves-light red right" ng-show="hover" ng-click="deleteFolder(folder.id)"><i class="material-icons">delete</i></a>
+      </div>
+      <div class="card-action">
+        <a ng-href="#!/my-folder/{{folder.id}}" ng-click="getFolderWords(folder.id)">Saved Words</a>
+      </div>
+  </div>
+</div>
+
+</div>

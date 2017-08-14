@@ -26,9 +26,35 @@ jpApp.config( ($routeProvider) => {
     templateUrl: 'partials/log-in.html',
     controller: 'UserController'
     })
+    .when('/practice', {
+        templateUrl: 'partials/flashcard.html',
+        controller: 'FlashcardController',
+        resolve: {isAuth}
+    })
+    .when('/practice-folder/:folderId', {
+        templateUrl: 'partials/folder-flashcard.html',
+        controller: 'FolderFlashcardController',
+        resolve: {isAuth}
+    })
+    .when('/create-folder', {
+        templateUrl: 'partials/create-folder.html',
+        controller: 'CreateFolderController',
+        resolve: {isAuth}
+    })
+    .when('/folders', {
+        templateUrl: 'partials/folders.html',
+        controller: 'FolderController',
+        resolve: {isAuth}
+    })
+    .when('/my-folder/:folderId', {
+        templateUrl: 'partials/my-folder.html',
+        controller: 'MyFolderController',
+        resolve: {isAuth}
+    })
     .when('/saved', {
         templateUrl: 'partials/saved.html',
-        controller: 'SavedController'
+        controller: 'SavedController',
+        resolve: {isAuth}
     })
     .otherwise('/');
 });

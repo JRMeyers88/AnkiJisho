@@ -4,18 +4,110 @@
     // box-sizing: border-box;
 }
 
+// @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+
 .mainbody {
     background-image: url('../img/038.jpg');
     background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.foldersbody {
+    background-image: url('../img/0003.png');
+    background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.folderbody {
+    background-image: url('../img/0002.png');
+    background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.createbody {
+    background-image: url('../img/025.jpg');
+    background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.loginbody {
+    background-image: url('../img/0006.png');
+    background-size: 1600px;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.mycardsbody {
+    background-image: url('../img/030.jpg');
+    background-size: auto;
+    width: 100%;
+    height: 1000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+
+.flashcardbody {
+    background-image: url('../img/0005.png');
+    background-position: auto;
+    background-size: auto;
+    width: 100%;
+    height: 500px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+.folderflashcardbody {
+    background-image: url('../img/044.jpg');
+    background-position: bottom;
+    background-size: auto;
+    width: 100%;
+    height: 500px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
 
 .wordcard {
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
     padding: 5px;
+    margin: 10px 15%;
+    box-shadow: 2px 2px 8px black;
+    overflow: auto;
+}
+
+.wordcard:hover {
+    background-color: rgba(30,15,45, 0.75);
+    color: white;
+    padding: 5px;
+    margin: 10px 15%;
+    box-shadow: 2px 2px 8px black;
+    overflow: auto;
+}
+
+.flashcard {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px;
+    height: 460px;
     margin: 10px 15%;
     box-shadow: 2px 2px 8px black;
 }
@@ -33,14 +125,14 @@
     font-size: 1.5em;
 }
 
-// .sidenav {
-//     float: left;
-//     width: 33.3%;
-//     padding: 0 10% 0 5%;
-//     background-color: #DEDEDE;
-//     height: 370px;
-//     position: top;
-// }
+.partsofspeech {
+    font-size: 1.5em;
+    float: right;
+}
+
+.opacity {
+  opacity: .75;
+}
 
 .nav {
     background-color: black;

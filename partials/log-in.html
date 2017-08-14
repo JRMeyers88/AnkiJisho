@@ -1,13 +1,17 @@
-<section class="user-form">
-  <h1>Login or Register</h1>
-  <div>
-    Email: <input type="email" ng-model="account.email">
+<div class="loginbody">
+<div class="flashcard center">
+  <section class="user-form">
+    <h1>Login or Register</h1>
+    <div>
+      Email: <input type="email" ng-model="account.email">
+    </div>
+    <div>
+      Password: <input type="password" ng-model="account.password">
+    </div>
+    <div>
+      <a class="waves-effect waves-light btn" ng-click="login()">Log in</a> &nbsp;
+      <a class="waves-effect waves-light btn" ng-click="register()">Register</a>
+    </div>
+  </section>
   </div>
-  <div>
-    Password: <input type="password" ng-model="account.password">
-  </div>
-  <div>
-    <button class="" ng-click="login()">Log in</button>
-    <button class="" ng-click="register()">Register</button>
-  </div>
-</section>
+</div>

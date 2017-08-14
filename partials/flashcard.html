@@ -1,0 +1,22 @@
+
+
+<div class="flashcardbody">
+    <div class="flashcard">
+
+        <div ng-repeat="flashcard in deckArr track by $index" class="center">
+            <span ng-show="$index === card"><span ng-repeat="japanese in flashcard.japanese">
+                <span class="mainDefinition">{{japanese.word}} <span class="pink-text">{{japanese.reading}}</span></span><br>
+                <span class="englishDefinition" ng-show="definition" ng-repeat="english in flashcard.senses">{{english.english_definitions[0]}} </span><br>
+            <span ng-show="$last && card !== deckArr.length">
+              <a class="waves-effect waves-light btn" ng-click="right()" ng-show="definition">Right</a>
+              <a class="waves-effect waves-light btn" ng-click="definition=true" ng-show="!definition">Show Answer</a>
+              <a class="waves-effect waves-light btn" ng-click="wrong(flashcard)" ng-show="definition">Wrong</a>
+            </span>
+            </span></span>
+        </div>
+
+    </div>
+</div>
+
+
+
