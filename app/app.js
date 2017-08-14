@@ -31,6 +31,11 @@ jpApp.config( ($routeProvider) => {
         controller: 'FlashcardController',
         resolve: {isAuth}
     })
+    .when('/practice-folder/:folderId', {
+        templateUrl: 'partials/folder-flashcard.html',
+        controller: 'FolderFlashcardController',
+        resolve: {isAuth}
+    })
     .when('/create-folder', {
         templateUrl: 'partials/create-folder.html',
         controller: 'CreateFolderController',
@@ -43,7 +48,7 @@ jpApp.config( ($routeProvider) => {
     })
     .when('/my-folder/:folderId', {
         templateUrl: 'partials/my-folder.html',
-        controller: 'FolderController',
+        controller: 'MyFolderController',
         resolve: {isAuth}
     })
     .when('/saved', {

@@ -21,7 +21,6 @@ jpApp.controller("SavedController", function($scope, $window, $routeParams, Word
                 userWordData[key].fbid = key;
                 $scope.userWordArr.push(userWordData[key]);
             });
-            console.log("User Words", $scope.userWordArr);
         });
     }
 

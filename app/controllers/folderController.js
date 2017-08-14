@@ -13,37 +13,33 @@ jpApp.controller("FolderController", function($scope, $window, $routeParams, Wor
     });
 
     function getFolders() {
-        let userFolderArr = [];
+        $scope.userFolders = [];
         WordFactory.getUserFolders()
         .then( (folderList) => {
             let userFolderData = folderList.data;
-            // console.log("user folder data", folderList);
             Object.keys(userFolderData).forEach( (key) => {
                 userFolderData[key].id = key;
-                userFolderArr.push(userFolderData[key]);
+                // console.log("folder key", userFolderData.id);
+                $scope.userFolders.push(userFolderData[key]);
             });
-            $scope.userFolders = userFolderArr;
+            console.log("folders", $scope.userFolders);
         })
         .catch( (err) => {
             console.log("Error fetching folders", err);
         });
     }
 
-    $scope.getFolder = function(folderId) {
-        let folderArr = [];
-        WordFactory.getFolder(folderId)
-        .then( (folderList) => {
-            let folderData = folderList.data;
-            $scope.folders = folderData;
-        })
-        .catch( (err) => {
-            console.log("error my dude", err);
+    $scope.deleteFolder = (id) => {
+        console.log("id", id);
+        WordFactory.deleteUserFolder(id)
+        .then( (data) => {
+            getFolders();
         });
     };
 
     $scope.addToFolder = (folderId, word) => {
-        word.uid = currentUser;
         word.fid = folderId;
+        word.uid = currentUser;
         let addedWord = word;
         WordFactory.addWord(addedWord);
     };

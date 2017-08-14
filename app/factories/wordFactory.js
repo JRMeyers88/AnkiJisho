@@ -2,7 +2,7 @@
 
 jpApp.factory('WordFactory', function($q, $http, FirebaseUrl, UserFactory) {
 
-        let getWords = (search) => {
+    let getWords = (search) => {
         return $q( (resolve, reject) => {
             $http.get(`https://ankijisho.herokuapp.com/api/jisho/${search}`)
             .then( (words) => {
@@ -51,6 +51,30 @@ jpApp.factory('WordFactory', function($q, $http, FirebaseUrl, UserFactory) {
         });
     };
 
+    let deleteUserFolder = (id) => {
+        return $q( (resolve, reject) => {
+            $http.delete(`${FirebaseUrl}/folders/${id}.json`)
+            .then( (data) => {
+                resolve(data);
+            })
+            .catch( (err) => {
+                reject(err);
+            });
+        });
+    };
+
+    let deleteFolderWord = (fwid) => {
+        return $q( (resolve, reject) => {
+            $http.delete(`${FirebaseUrl}/addedWords/${fwid}.json`)
+            .then( (data) => {
+                resolve(data);
+            })
+            .catch( (err) => {
+                reject(err);
+            });
+        });
+    };
+
     let addFolder = (newFolder) => {
         return $q( (resolve, reject) => {
             $http.post(`${FirebaseUrl}/folders.json`,
@@ -69,7 +93,6 @@ jpApp.factory('WordFactory', function($q, $http, FirebaseUrl, UserFactory) {
             $http.get(`${FirebaseUrl}/folders.json?orderBy="uid"&equalTo="${UserFactory.getUser()}"`)
             .then( (folderData) => {
                 resolve(folderData);
-                // console.log("folderData", folderData);
             })
             .catch( (err) => {
                 reject(err);
@@ -77,11 +100,11 @@ jpApp.factory('WordFactory', function($q, $http, FirebaseUrl, UserFactory) {
         });
     };
 
-    let getFolder = (folderId) => {
+    let getFolderWords = (folderId) => {
         return $q( (resolve, reject) => {
-            $http.get(`${FirebaseUrl}/folders/${folderId}.json`)
-            .then( (folderData) => {
-                resolve(folderData);
+            $http.get(`${FirebaseUrl}/addedWords.json?orderBy="fid"&equalTo="${folderId}"`)
+            .then( (folderWords) => {
+                resolve(folderWords);
             })
             .catch( (err) => {
                 reject(err);
@@ -102,5 +125,5 @@ jpApp.factory('WordFactory', function($q, $http, FirebaseUrl, UserFactory) {
     };
 
 
-    return { getWords, saveWords, getUserWords, deleteWord, addFolder, getUserFolders, getFolder, addWord };
+    return { getWords, saveWords, getUserWords, deleteWord, addFolder, getUserFolders, addWord, getFolderWords, deleteFolderWord, deleteUserFolder };
 });
