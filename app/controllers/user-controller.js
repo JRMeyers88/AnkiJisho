@@ -8,10 +8,8 @@ jpApp.controller("UserController", function($scope, $window, UserFactory) {
   };
 
   $scope.register = () => {
-    console.log("you clicked register");
     UserFactory.createUser($scope.account)
     .then( (userData) => {
-      console.log("New User!", userData);
       $scope.login();
     });
   };
@@ -19,7 +17,6 @@ jpApp.controller("UserController", function($scope, $window, UserFactory) {
   $scope.login = () => {
     UserFactory.loginUser($scope.account)
     .then( (userData) => {
-      console.log("userData", userData);
       $window.location.href = '#!/';
     });
   };

@@ -23,6 +23,7 @@ jpApp.controller("FlashcardController", function($scope, $window, UserFactory, W
                   // return 0.5 - Math.random();
                   return Math.floor(Math.random() * $scope.deckArr.length);
                 });
+                $scope.remainingWords = $scope.deckArr.length;
             });
         });
     }
@@ -31,11 +32,13 @@ jpApp.controller("FlashcardController", function($scope, $window, UserFactory, W
     $scope.card = 0;
     $scope.right = function() {
         $scope.card = $scope.card + 1;
+        $scope.remainingWords--;
     };
 
 
     $scope.wrong = function(word) {
         $scope.deckArr.push(word);
+        $scope.remainingWords++;
         $scope.right();
     };
 
