@@ -20,9 +20,9 @@ jpApp.controller("FolderFlashcardController", function($scope, $window, $routePa
             angular.forEach(cardList, function(card) {
                 $scope.folderDeckArr.push(card);
                 $scope.folderDeckArr.sort(function() {
-                  // return 0.5 - Math.random();
                   return Math.floor(Math.random() * $scope.folderDeckArr.length);
                 });
+                $scope.remainingWords = $scope.folderDeckArr.length;
             });
         });
     }
@@ -31,11 +31,13 @@ jpApp.controller("FolderFlashcardController", function($scope, $window, $routePa
     $scope.card = 0;
     $scope.right = function() {
         $scope.card = $scope.card + 1;
+        $scope.remainingWords--;
     };
 
 
     $scope.wrong = function(word) {
         $scope.folderDeckArr.push(word);
+        $scope.remainingWords++;
         $scope.right();
     };
 

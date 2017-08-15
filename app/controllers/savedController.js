@@ -12,6 +12,12 @@ jpApp.controller("SavedController", function($scope, $window, $routeParams, Word
         }
     });
 
+    function timeSort(a, b) {
+        let sortedArr = [];
+        sortedArr.push(a.timestamp - b.timestamp);
+        return sortedArr;
+    }
+
     function getUserWords() {
         $scope.userWordArr = [];
         WordFactory.getUserWords(currentUser)
@@ -20,12 +26,14 @@ jpApp.controller("SavedController", function($scope, $window, $routeParams, Word
             Object.keys(userWordData).forEach( (key) => {
                 userWordData[key].fbid = key;
                 $scope.userWordArr.push(userWordData[key]);
+                $scope.userWordArr.sort(timeSort).reverse();
+                $scope.wordCount = $scope.userWordArr.length;
             });
         });
     }
 
+
     $scope.deleteUserWord = (fbid) => {
-        console.log("fbid", fbid);
         WordFactory.deleteWord(fbid)
         .then( (data) => {
             getUserWords();

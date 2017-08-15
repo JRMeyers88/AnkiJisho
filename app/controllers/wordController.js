@@ -45,9 +45,10 @@ jpApp.controller('WordController', function($scope, $q, $window, WordFactory, Us
 
     $scope.saveWord = (word) => {
         word.uid = currentUser;
+        word.timestamp = Date.now();
         let addedWord = word;
+        console.log("added word", addedWord);
         WordFactory.saveWords(word);
-        console.log("you saved the word", word);
     };
 
 });

@@ -56,6 +56,10 @@ jpApp.config( ($routeProvider) => {
         controller: 'SavedController',
         resolve: {isAuth}
     })
+    .when('/about', {
+        templateUrl: 'partials/about.html',
+        controller: 'AboutController'
+    })
     .otherwise('/');
 });
 
