@@ -29,6 +29,7 @@ jpApp.controller('WordController', function($scope, $q, $window, WordFactory, Us
 
 
     function getWords() {
+        $scope.loading = true;
         WordFactory.getWords($scope.search)
             .then( (words) => {
                 $scope.wordArr = [];
@@ -36,6 +37,7 @@ jpApp.controller('WordController', function($scope, $q, $window, WordFactory, Us
                 angular.forEach($scope.word, function(data) {
                     $scope.wordArr.push(data);
                 });
+                $scope.loading = false;
                 console.log("words", $scope.wordArr);
             })
             .catch( (err) => {
