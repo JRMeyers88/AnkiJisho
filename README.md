@@ -19,3 +19,7 @@ For each flashcard you will be presented with a random word in Japanese first an
 
 If you find that your saved library has grown too large or if you simply want to focus on a certain category of words such as verbs or onomatopoeia, you can create your own folders by clicking the "new folder" tab in the nav bar. After creating your folder you can see all folders and how many cards per folder in the "folders" tab. To add a card to a folder is easy! Just hover over a word in your saved library and click on the folder or folders you would like to add that word to. Now, when viewing the contents of the folder, you can practice just the words of that folder!
 If you choose to remove any words or folders, simply hover over the card you want to remove and click the red delete button. Don't worry, deleting a folder or the contents of a folder will not remove the items from your saved library.
+
+# Future versions:
+
+Plans for future versions include web-scraping NHK news sources to view a word's commonality as well as example sentence(s), modals for adding and deleting for a better user experience, and a better flashcard system mimicking the 'spaced repitition' method to better accommodate larger flashcard 'decks'
