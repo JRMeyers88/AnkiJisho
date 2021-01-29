@@ -30,15 +30,20 @@ jpApp.controller("FlashcardController", function($scope, $window, UserFactory, W
 
 
     $scope.card = 0;
+    $scope.totalRight = 0;
+    $scope.totalWrong = 0;
     $scope.right = function() {
         $scope.card = $scope.card + 1;
         $scope.remainingWords--;
+        $scope.totalRight++;
     };
 
 
     $scope.wrong = function(word) {
         $scope.deckArr.push(word);
         $scope.remainingWords++;
+        $scope.totalWrong++;
+        $scope.totalRight--;
         $scope.right();
     };
 

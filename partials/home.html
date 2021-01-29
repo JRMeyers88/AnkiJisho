@@ -7,6 +7,7 @@
 </div>
 
 <div class="mainbody">
+    <div ng-show="loading"><img src="../img/loading.gif" class="loadicon"></div>
     <div ng-show="search.length" ng-repeat="word in wordArr | filter: wordfinder">
         <div class="wordcard hoverable" ng-mouseover="hover=true" ng-mouseleave="hover=false">
 

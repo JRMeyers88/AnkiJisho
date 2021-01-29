@@ -2,11 +2,15 @@
 <html>
 <head>
     <title>AnkiJisho暗記辞書</title>
+    <!-- BOOTSTRAP?? -->
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+    <!-- /BOOTSTRAP -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
-    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+    <link type="text/css" rel="stylesheet" href="lib/node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="lib/node_modules/tingle.js/dist/tingle.min.css">
 </head>
 <!-- INITIALIZE -->
 <body ng-app="JPApp" class="black">
@@ -26,14 +30,21 @@
 <div ng-include="'partials/footer.html'"></div>
 
 <!-- SCRIPTS -->
+    <!-- BOOTSTRAP?? -->
+<!--     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+    <!-- /BOOTSTRAP -->
+
     <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
     <script type="text/javascript" src="lib/node_modules/materialize-css/dist/js/materialize.min.js"></script>
-    <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script>
+    <!-- <script src="https://rawgit.com/dwmkerr/angular-modal-service/master/dst/angular-modal-service.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
+    <script src="lib/node_modules/tingle.js/dist/tingle.min.js"></script>
 
 <!-- APP FILES -->
     <script type="text/javascript" src="app/app.js"></script>
@@ -46,6 +57,7 @@
 <!-- CONTROLLERS -->
     <script src="app/controllers/user-Controller.js"></script>
     <script src="app/controllers/navController.js"></script>
+    <script src="app/controllers/aboutController.js"></script>
     <script src="app/controllers/wordController.js"></script>
     <script src="app/controllers/savedController.js"></script>
     <script src="app/controllers/flashcardController.js"></script>

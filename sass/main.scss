@@ -7,26 +7,49 @@
 // @import url('http://getbootstrap.com/dist/css/bootstrap.css');
 
 .mainbody {
-    background-image: url('../img/038.jpg');
-    background-size: 1600px;
+    background-image: url('../img/070.jpg');
+    background-size: 100%;
     height: 1000px;
+    width: auto;
     padding-top: 10px;
     padding-bottom: 10px;
     overflow: scroll;
+}
+
+.loadicon {
+    position: absolute;
+    left: 3%;
+    top: 30%;
+    height: 10%;
+    opacity: .75;
 }
 
 .aboutbody {
     background-image: url('../img/052.jpg');
-    background-size: 1600px;
+    background-size: 100%;
     height: 1000px;
     padding-top: 10px;
     padding-bottom: 10px;
     overflow: scroll;
 }
 
+.aboutcard {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px;
+    margin: 10px 15%;
+    box-shadow: 2px 2px 8px black;
+    overflow: auto;
+}
+
+.aboutimg {
+    width: auto;
+    max-width: 800px;
+}
+
 .foldersbody {
     background-image: url('../img/0003.png');
-    background-size: 1600px;
+    background-size: 100%;
     height: 1000px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -35,7 +58,7 @@
 
 .folderbody {
     background-image: url('../img/0002.png');
-    background-size: 1600px;
+    background-size: 100%;
     height: 1000px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -44,7 +67,7 @@
 
 .createbody {
     background-image: url('../img/025.jpg');
-    background-size: 1600px;
+    background-size: 100%;
     height: 1000px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -53,7 +76,7 @@
 
 .loginbody {
     background-image: url('../img/0006.png');
-    background-size: 1600px;
+    background-size: 100%;
     height: 1000px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -62,7 +85,7 @@
 
 .mycardsbody {
     background-image: url('../img/030.jpg');
-    background-size: auto;
+    background-size: 100%;
     width: 100%;
     height: 1000px;
     padding-top: 10px;
@@ -73,7 +96,7 @@
 .flashcardbody {
     background-image: url('../img/0005.png');
     background-position: auto;
-    background-size: auto;
+    background-size: 100%;
     width: 100%;
     height: 1000px;
     padding-top: 10px;
@@ -83,11 +106,19 @@
 .folderflashcardbody {
     background-image: url('../img/044.jpg');
     background-position: bottom;
-    background-size: auto;
+    background-size: 100%;
     width: 100%;
     height: 1000px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.scoreCounter {
+    font-size: 4em;
+}
+
+.congrats {
+    font-size: 2em;
 }
 
 ::-webkit-scrollbar {
